@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Register</h2>
+    <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)">
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput type="text" name="fullName" ngModel required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" ngModel required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" ngModel required />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Register</button>
+    </form>
+  </div>
+  
