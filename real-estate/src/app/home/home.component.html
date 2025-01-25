@@ -1,5 +1,10 @@
 <div class="home-container">
     <h1>Welcome to Real Estate Home</h1>
     <p>Browse the latest properties available for sale or rent.</p>
-</div>
+    <!-- Display the logged-in user's information -->
+    <div *ngIf="user">
+      <h2>Welcome, {{ user.email }}!</h2>
+      <p>Your email: {{ user.email }}</p>
+    </div>
+  </div>
   

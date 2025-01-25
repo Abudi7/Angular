@@ -1,0 +1,71 @@
+/* إعدادات الخطوط الأساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* تصميم الحاوية الرئيسية */
+  .home-container {
+    background-color: #f7f7f7; /* لون خلفية هادئ */
+    color: #333; /* لون النص الأساسي */
+    font-family: 'Arial', sans-serif;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* العنوان الرئيس */
+  .home-container h1 {
+    font-size: 2.5rem;
+    color: #2a5d84; /* لون تجاري رئيسي */
+    margin-bottom: 20px;
+  }
+  
+  /* النص الفرعي */
+  .home-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* تصميم صندوق المستخدم */
+  .home-container div {
+    background-color: #fff; /* خلفية بيضاء */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* العنوان الخاص بالمستخدم */
+  .home-container h2 {
+    font-size: 1.8rem;
+    color: #2a5d84; /* نفس اللون الرئيسي */
+    margin-bottom: 10px;
+  }
+  
+  /* النص الخاص بالبريد الإلكتروني */
+  .home-container p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* تصميم زر أو رابط للوظائف الإضافية */
+  button {
+    background-color: #2a5d84; /* نفس اللون التجاري */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1a3e63; /* تغيير اللون عند التمرير */
+  }
+  

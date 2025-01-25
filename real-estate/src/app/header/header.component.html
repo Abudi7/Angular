@@ -1,10 +1,26 @@
 <header>
-    <nav>
-      <ul>
-        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
-        <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
-      </ul>
-    </nav>
-  </header>
-  
+  <nav>
+    <div class="logo">
+      <h1>Real Estate</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+      <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
+      <li *ngIf="user">
+        <span>Welcome, {{ user.full_name }}</span>
+      </li>
+      <li class="lang-selector">
+        <select (change)="changeLanguage($event)" [value]="language">
+          <option value="en">English</option>
+          <option value="ar">عربي</option>
+        </select>
+      </li>
+    </ul>
+    <div class="burger" (click)="toggleMenu()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</header>

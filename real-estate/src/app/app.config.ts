@@ -1,20 +1,14 @@
-// src/app/app.module.ts
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';  // Import AppRoutingModule
-import { HttpClientModule } from '@angular/common/http';  // Import HttpClientModule
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';  // تأكد من أن هذا موجود
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideHttpClient } from '@angular/common/http';  // تأكد من استيراده هنا
 
-@NgModule({
-  declarations: [
-    AppComponent  // Declare your AppComponent here
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(),  // إضافة HttpClientModule هنا
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideAnimationsAsync(),
   ],
-  imports: [
-    BrowserModule,      // Ensure BrowserModule is included
-    AppRoutingModule,   // Import the routing module
-    HttpClientModule,   // Add HttpClientModule to the imports
-  ],
-  providers: [],
-  bootstrap: [AppComponent],  // Ensure AppComponent is bootstrapped
-})
-export class AppModule {}
+};
